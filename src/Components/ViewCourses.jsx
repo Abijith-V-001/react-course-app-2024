@@ -25,10 +25,12 @@ const ViewCourses = () => {
                             <thead>
                                 <tr>
                                     
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Roll no</th>
-                                    <th scope="col">Admission no</th>
-                                    <th scope="col">College</th>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Start date</th>
+                                    <th scope="col">Duration</th>
+                                    <th scope="col">Venue</th>
+                                    <th scope="col">Trainer</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -36,10 +38,12 @@ const ViewCourses = () => {
                                 (value,index)=>{
                                     return  <tr>
                                     
-                                    <td>{value.name}</td>
-                                    <td>{value.rollNo}</td>
-                                    <td>{value.admNo}</td>
-                                    <td>{value.college}</td>
+                                    <td>{value.title}</td>
+                                    <td>{value.description}</td>
+                                    <td>{value.startdate}</td>
+                                    <td>{value.duration}</td>
+                                    <td>{value.venue}</td>
+                                    <td>{value.trainer}</td>
                                     
                                 </tr>
                                 }

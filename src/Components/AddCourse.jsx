@@ -25,7 +25,7 @@ const AddCourse = () => {const[data,changeData]=useState([
                     alert("could not add data")
                 }
             }
-        ).catch().finally
+        ).catch().finally()
      }
         return (
             <div>
