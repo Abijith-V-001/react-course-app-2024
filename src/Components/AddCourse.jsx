@@ -1,5 +1,6 @@
 import axios from 'axios'
-import React from 'react'
+import React, { useState } from 'react'
+import Navbar from './Navbar'
 
 const AddCourse = () => {const[data,changeData]=useState([
     {
@@ -15,7 +16,7 @@ const AddCourse = () => {const[data,changeData]=useState([
      }
      const readValue=()=>{
         console.log(data)
-        axios.post("http://localhost:8080/add",data).then(
+        axios.post("http://localhost:8083/add",data).then(
             (response)=>{
                 console.log(response.data)
                 if (response.data.status=="success") {
@@ -49,22 +50,36 @@ const AddCourse = () => {const[data,changeData]=useState([
                             <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
     
     
-                                <label htmlFor="" className="form-label">Admission no</label>
-                                <input type="text" className="form-control" name='startdate' value={data.admNo} onChange={inputHandler}/>
+                                <label htmlFor="" className="form-label">Start date</label>
+                                <input type="text" className="form-control" name='startdate' value={data.startdate} onChange={inputHandler}/>
     
                             </div>
                             <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
     
     
-                                <label htmlFor="" className="form-label">College</label>
-                                <input type="text" className="form-control" name='college' value={data.college} onChange={inputHandler}/>
+                                <label htmlFor="" className="form-label">Duration</label>
+                                <input type="text" className="form-control" name='duration' value={data.duration} onChange={inputHandler}/>
+    
+                            </div>
+                            <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+    
+    
+                                <label htmlFor="" className="form-label">Venue</label>
+                                <input type="text" className="form-control" name='venue' value={data.venue} onChange={inputHandler}/>
+    
+                            </div>
+                            <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+    
+    
+                                <label htmlFor="" className="form-label">Trainer</label>
+                                <input type="text" className="form-control" name='trainer' value={data.trainer} onChange={inputHandler}/>
     
                             </div>
                             <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
     
     
     
-                            <button className="btn btn-success" onClick={readValue}>Add Student</button>                        </div>
+                            <button className="btn btn-success" onClick={readValue}>Add Course</button></div>
                         </div>
                     </div>
                 </div>
